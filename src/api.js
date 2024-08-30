@@ -25,8 +25,8 @@ app.use('/', router.get('/', (req, res, next) => {
 
 app.use('/', router.get('/sobre', (req, res, next) => {
     res.status(200).send ({
-        "nome" : "CHATINFO",
-        "autor" : "Valentina Fischer Martins Pacheco",
+        "nome" : "CHAT!",
+        "autor" : "Eduarda Oliveira de Souza",
         "versao" : "0.1.0"
     });
 }));
@@ -37,7 +37,7 @@ app.use('/entrar', router.post('/entrar', async(req, res, next) => {
         let resp = await usuarioController.entrar(req.body.nick);
         res.status(200).send(resp);
     } else{
-        res.status(401).send({"msg":"Usuário inválido"});
+        res.status(401).send({"msg":"O usuário é inválido"});
     }
 }));
 
@@ -47,7 +47,7 @@ app.use('/salas', router.get('/salas', async (req, res, next) => {
         let resp = await salaController.get();
         res.status(200).send(resp);
     } else{
-        res.status(401).send({"msg":"Usuário não encontrado"});
+        res.status(401).send({"msg":"O usuário não foi encontrado!!"});
     }
 }));
 
@@ -61,7 +61,7 @@ app.use("/sala/entrar", router.post("/sala/entrar", async (req, res) => {
         let resp = await salaController.entrar(req.headers.iduser, idsala);
         res.status(200).send(resp);
     } else{
-        res.status(401).send({msg:"Usuário não autorizado"});
+        res.status(401).send({msg:"O usuário não foi autorizado!!"});
     }
 }));
   
