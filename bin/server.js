@@ -1,12 +1,13 @@
 require("dotenv").config();
-const app = require("../src/api");
+const  app = require("../src/api");
 
-app.use((req, res, next) => {
+app.use((req, res, next)=>{
     next();
 });
 
-console.log(process.env.API_PORT);
-let port = process.env.API_PORT||3001;
+let port = process.env.API_PORT || 3005;
+
 app.listen(port);
 
-console.log(`listening on ${port}`);
+console.log("DB HOST: "+process.env.DB_HOST);   
+console.log("Starting in port ..." + port);
