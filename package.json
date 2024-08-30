@@ -1,10 +1,10 @@
 {
-  "name": "chat",
+  "name": "api-node-mongo",
   "version": "1.0.0",
-  "description": "chat api",
+  "description": "API de chat",
   "main": "index.js",
   "scripts": {
-    "start": "node ./bin/server.js",
+    "start": "nodemon ./bin/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -13,21 +13,23 @@
   },
   "keywords": [
     "api",
-    "chat",
+    "chat!",
     "mongo",
     "node",
-    "CHAT!"
+    "informática"
   ],
-  "author": "Eduarda Oliveira e Manuella Farias",
+  "author": "Eduarda Oliveira de Souza",
   "license": "ISC",
   "bugs": {
     "url": "git+https://github.com/dudadadad/chat-api.git"
   },
   "homepage": "git+https://github.com/dudadadad/chat-api.git",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
-    "mongodb": "^6.8.0"
+    "mongodb": "^6.7.0",
+    "nodemon": "^3.1.4"
   }
 }
